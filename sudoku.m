@@ -14,7 +14,7 @@ function [ output ] = sudokuMainLoop( A )
 %solves sudoku puzzles
 %       This is a depth first search algorithm for find the solution to sudoku
 %   puzzles in matlab. It finds a hole, and tries to plug it with a number
-%   from 1 to 9. if it sucessfully finds something that will fill the hole
+%   from 1 to 9. if it successfully finds something that will fill the hole
 %   in the puzzle it will move on to the next hole. If it can't find a
 %   valid number to fill the hole with, it assumes one of its earlier
 %   guesses was wrong and backtracks. It will go as far as possible along each
@@ -22,7 +22,7 @@ function [ output ] = sudokuMainLoop( A )
 
 %       This algorithm works as long as the sudoku puzzle it was given is valid. 
 %   It simply iterates through every permutation of the given puzzle
-%   until it finds a valid solution with complete disregard for inteligent
+%   until it finds a valid solution with complete disregard for intelligent
 %   strategy
 %
 %       WARNING: this algorithm is CRAZY FAST. You might not believe the
