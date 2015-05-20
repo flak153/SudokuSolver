@@ -14,3 +14,8 @@ This algorithm works as long as the sudoku puzzle it was given is valid.
 It simply iterates through every permutation of the given puzzle
 until it finds a valid solution with complete disregard for inteligent
 strategy
+
+You might believe that solving puzzles intelligently would be faster, 
+however I found that the fastest way to solve sudoku puzzles is to convert
+them into trees, thinking of every empty box as a branch, and then going up
+and down the tree until the leaf with the correct answer is found.
