@@ -27,7 +27,7 @@ function [ output ] = sudokuMainLoop( A )
 %
 
 
-for box = 1:81 %since it doesn't matter which order we plug holes in the puzzle I used a single loop that goes through all 81 boxes
+for box = 1:81 %since the order with which we fill the puzzle is irrelevant, I used a single loop that goes through all 81 boxes
     if A(box) == 0
         for int = 1:9
             if boxCheck(A, box, int)
@@ -38,7 +38,7 @@ for box = 1:81 %since it doesn't matter which order we plug holes in the puzzle 
             %disp(B) %comment this to suppress printout
             %pause(.5) %uncomment for a better veiw of how this works
             C = sudokuMainLoop(B); 
-            if C == 0; %sudoku() returns 0s if the function it was passed was either invalid or a hole couldn't be filled
+            if C == 0; %sudokuMainLoop() returns 0s if the function it was passed was either invalid or a hole couldn't be filled
                 continue
             else
                 output = C; %only valid solutions return a matrix
