@@ -25,7 +25,8 @@ function [ output ] = sudokuMainLoop( A )
 %   until it finds a valid solution with complete disregard for intelligent
 %   strategy
 %
-
+%       WARNING: this algorithm is CRAZY FAST. You might not believe the
+%       speed at which this thing solves difficult puzzles
 
 for box = 1:81 %since it doesn't matter which order we plug holes in the puzzle I used a single loop that goes through all 81 boxes
     if A(box) == 0
